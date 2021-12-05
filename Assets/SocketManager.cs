@@ -6,7 +6,7 @@ using WebSocketSharp;
 public class SocketManager : MonoBehaviour
 {
     WebSocket ws;
-    public string API_URL = "http://4f4a-68-234-129-29.ngrok.io";
+    private string API_URL = "wss://4f4a-68-234-129-29.ngrok.io";
 
     // Start is called before the first frame update
     void Start()

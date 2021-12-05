@@ -5,6 +5,12 @@ using System.IO;
 using UnityEngine;
 using WebSocketSharp;
 
+[Serializable]
+class SocketMessage {
+    public string sender;
+    public string base64;
+}
+
 public class SocketManager : MonoBehaviour
 {
     public GameObject screen;
@@ -24,7 +30,10 @@ public class SocketManager : MonoBehaviour
         ws.Connect();
         ws.OnMessage += (sender, e) =>
         {
-            Debug.Log("Message Received from "+((WebSocket)sender).Url+", Data : "+e.Data);
+            SocketMessage message = JsonUtility.FromJson<SocketMessage>(e.Data);
+            // Debug.Log(message.base64);
+            base64 = message.base64;
+            // Debug.Log("Message Received from "+((WebSocket)sender).Url+", Data : "+e.Data);
         };
     }
 
@@ -48,6 +57,6 @@ public class SocketManager : MonoBehaviour
         }
         
         // TODO: send controls
-        // ws.Send("Hello");
+        ws.Send("Hello");
     }
 }

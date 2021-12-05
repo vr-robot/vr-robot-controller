@@ -6,7 +6,10 @@ using WebSocketSharp;
 public class SocketManager : MonoBehaviour
 {
     WebSocket ws;
-    private string API_URL = "wss://4f4a-68-234-129-29.ngrok.io";
+    // AWS:
+    // private string API_URL = "ws://18.232.126.27:5000/";
+    // localhost:
+    private string API_URL = "ws://2f6f-68-234-129-29.ngrok.io";
 
     // Start is called before the first frame update
     void Start()

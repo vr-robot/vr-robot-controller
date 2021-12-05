@@ -421,7 +421,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15abfe2126f01400da1d6ef14b587ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  API_URL: wss://4f4a-68-234-129-29.ngrok.io
 --- !u!1001 &4553475143868686260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -431,11 +430,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4548829356261835197, guid: 4760b9f1562b84c6b9af1bab06491017, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4549162534144170625, guid: 4760b9f1562b84c6b9af1bab06491017, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.58
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4553475143647026631, guid: 4760b9f1562b84c6b9af1bab06491017, type: 3}
       propertyPath: m_Name

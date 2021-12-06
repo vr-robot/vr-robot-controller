@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91af2234-ac81-4c41-abf2-bc6894fdfbb2" name="Changes" comment="stability improvements">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SocketManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SocketManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +24,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/NuGet.config.meta" root0="SKIP_HIGHLIGHTING" />
@@ -88,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638671210517</updated>
       <workItem from="1638671216532" duration="7679000" />
-      <workItem from="1638752030812" duration="6208000" />
+      <workItem from="1638752030812" duration="6415000" />
     </task>
     <task id="LOCAL-00001" summary="standardized data sending convention">
       <created>1638752858879</created>
@@ -160,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638761455120</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="stability improvements">
+      <created>1638761849806</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1638761849806</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -32,12 +32,16 @@ public class SocketManager : MonoBehaviour
     // method to add to queue
     public void AddToMessageQueue(string message)
     {
-        _messageQueue.Enqueue(message);
+        if (_messageQueue != null)
+        {
+            _messageQueue.Enqueue(message);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        // initialize message queue object
         _messageQueue = new Queue();
         
         string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
@@ -49,8 +53,11 @@ public class SocketManager : MonoBehaviour
 
         AddToMessageQueue(dataStr);
         
+        // connect to socket server
         _ws = new WebSocket(API_URL);
         _ws.Connect();
+        
+        // callback for new socket messages
         _ws.OnMessage += (sender, e) =>
         {
             SocketMessage message = JsonUtility.FromJson<SocketMessage>(e.Data);
@@ -71,7 +78,7 @@ public class SocketManager : MonoBehaviour
         
         // send controls
         // TODO: consume from queue
-        while (_messageQueue.Count > 0)
+        while (_ws != null && _messageQueue != null && _messageQueue.Count > 0)
         {
             try
             {

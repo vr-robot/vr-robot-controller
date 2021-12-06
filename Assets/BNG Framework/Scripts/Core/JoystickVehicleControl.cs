@@ -7,6 +7,8 @@ namespace BNG {
     /// This component is similar to the JoystickControl, but is designed to be used on fast moving Rigidbodies
     /// </summary>
     public class JoystickVehicleControl : MonoBehaviour {
+        
+        public SocketManager SocketManager;
 
         [Header("Grab Object")]
         public Grabbable JoystickGrabbable;
@@ -160,11 +162,45 @@ namespace BNG {
             if (onJoystickChange != null) {
                 onJoystickChange.Invoke(leverX, leverY);
             }
+            
+            // Call Socket Manager
+            if (SocketManager != null)
+            {
+                string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                {
+                    id = GetInstanceID().ToString(),
+                    type = "joystick",
+                    data = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                    {
+                        leverX = leverX.ToString("N5"),
+                        leverY = leverY.ToString("N5")
+                    })
+                });
+
+                SocketManager.AddToMessageQueue(dataStr);
+            }
         }
 
         public virtual void OnJoystickChange(Vector2 joystickVector) {
             if (onJoystickVectorChange != null) {
                 onJoystickVectorChange.Invoke(joystickVector);
+            }
+            
+            // Call Socket Manager
+            if (SocketManager != null)
+            {
+                string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                {
+                    id = GetInstanceID().ToString(),
+                    type = "joystick",
+                    data = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                    {
+                        x = joystickVector.x.ToString("N5"),
+                        y = joystickVector.y.ToString("N5")
+                    })
+                });
+
+                SocketManager.AddToMessageQueue(dataStr);
             }
         }
     }

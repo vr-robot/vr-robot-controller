@@ -39,8 +39,14 @@ public class SocketManager : MonoBehaviour
             type = "button",
             data = "pressed"
         });
-        
-        _messageQueue.Enqueue(dataStr);
+
+        AddToMessageQueue(dataStr);
+    }
+    
+    // method to add to queue
+    public void AddToMessageQueue(string message)
+    {
+        _messageQueue.Enqueue(message);
     }
 
     // Start is called before the first frame update

@@ -20,12 +20,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/BNG Framework/Scenes/Vehicle Example.unity
     guid: d96233ee44d985d4fb8dc23a907c06eb
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 0
     path: Assets/BNG Framework/Integrations/Oculus Integration/Hand Tracking.unity
     guid: 8dee22924e05c964880504e0eabc4550
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 4bf8d7cb062244d729686c3a75a24bb7,
       type: 2}

@@ -49,10 +49,18 @@ public class SocketManager : MonoBehaviour
         }
         
         // send controls
+        // TODO: consume from queue
+        string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+        {
+            id = "some guid",
+            type = "button",
+            data = "pressed"
+        });
+        
         _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
         {
             sender = "vr-controller",
-            data = "some data for python"
+            data = dataStr
         }));
         
         // render new screen frame

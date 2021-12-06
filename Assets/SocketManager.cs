@@ -23,7 +23,7 @@ public class SocketManager : MonoBehaviour
     
     // socket and frame variables
     private WebSocket _ws;
-    private bool _newFrameAvailable;
+    // private bool _newFrameAvailable;
     private string _base64;
     
     // queue to consume when sending data to python client
@@ -60,7 +60,7 @@ public class SocketManager : MonoBehaviour
             if (message.sender.Equals("camera"))
             {
                 _base64 = message.data;
-                _newFrameAvailable = true;
+                // _newFrameAvailable = true;
             }
         };
     }
@@ -85,7 +85,7 @@ public class SocketManager : MonoBehaviour
         }
         
         // render new screen frame
-        if (screen != null && _newFrameAvailable && _base64 != null)
+        if (screen != null && _base64 != null)
         {
             byte[] bytes = Convert.FromBase64String(_base64);
             Texture2D tex = new Texture2D(1,1);
@@ -94,7 +94,7 @@ public class SocketManager : MonoBehaviour
             Material material = new Material(Shader.Find("Diffuse"));
             material.mainTexture = tex;
             screen.GetComponent<Renderer>().material = material;
-            _newFrameAvailable = false;
+            // _newFrameAvailable = false;
         }
     }
 }

@@ -48,6 +48,14 @@ public class SocketManager : MonoBehaviour
             return;
         }
         
+        // send controls
+        _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
+        {
+            sender = "vr-controller",
+            data = "some data for python"
+        }));
+        
+        // render new screen frame
         if (screen != null && _newFrameAvailable)
         {
             byte[] bytes = Convert.FromBase64String(_base64);
@@ -59,12 +67,5 @@ public class SocketManager : MonoBehaviour
             screen.GetComponent<Renderer>().material = material;
             _newFrameAvailable = false;
         }
-        
-        // send controls
-        _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
-        {
-            sender = "vr-controller",
-            data = "some data for python"
-        }));
     }
 }

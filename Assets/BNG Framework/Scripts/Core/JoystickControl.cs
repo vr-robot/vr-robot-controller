@@ -7,7 +7,10 @@ namespace BNG {
     /// <summary>
     /// Helper for joystick type physical inputs
     /// </summary>
-    public class JoystickControl : MonoBehaviour {
+    public class JoystickControl : MonoBehaviour
+    {
+
+        public SocketManager SocketManager;
 
         [Header("Deadzone")]
         [Tooltip("Any values below this threshold will not be passed to events")]
@@ -171,12 +174,46 @@ namespace BNG {
         }
         // Callback for lever percentage change
         public virtual void OnJoystickChange(float leverX, float leverY) {
+            // Call Socket Manager
+            if (SocketManager != null)
+            {
+                string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                {
+                    id = GetInstanceID().ToString(),
+                    type = "joystick",
+                    data = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                    {
+                        leverX = leverX.ToString("N5"),
+                        leverY = leverY.ToString("N5")
+                    })
+                });
+
+                SocketManager.AddToMessageQueue(dataStr);
+            }
+            
             if (onJoystickChange != null) {
                 onJoystickChange.Invoke(leverX, leverY);
             }
         }
 
         public virtual void OnJoystickChange(Vector2 joystickVector) {
+            // Call Socket Manager
+            if (SocketManager != null)
+            {
+                string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                {
+                    id = GetInstanceID().ToString(),
+                    type = "joystick",
+                    data = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                    {
+                        x = joystickVector.x.ToString("N5"),
+                        y = joystickVector.y.ToString("N5")
+                    })
+                });
+
+                SocketManager.AddToMessageQueue(dataStr);
+            }
+            
             if (onJoystickVectorChange != null) {
                 onJoystickVectorChange.Invoke(joystickVector);
             }

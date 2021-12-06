@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91af2234-ac81-4c41-abf2-bc6894fdfbb2" name="Changes" comment="updated gitgnore">
+    <list default="true" id="91af2234-ac81-4c41-abf2-bc6894fdfbb2" name="Changes" comment="updated data handling for robot">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SocketManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SocketManager.cs" afterDir="false" />
     </list>
@@ -25,6 +25,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/NuGet.config.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc3985d37b0241b48fc21474b2de25bda7e00/4a/59dc7b31/JsonConvert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10cba946e8e34ce09d78aa69c53a90703c00/52/5120b007/ImageConversion.cs" root0="SKIP_HIGHLIGHTING" />
@@ -82,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638671210517</updated>
       <workItem from="1638671216532" duration="7679000" />
-      <workItem from="1638752030812" duration="2967000" />
+      <workItem from="1638752030812" duration="3536000" />
     </task>
     <task id="LOCAL-00001" summary="standardized data sending convention">
       <created>1638752858879</created>
@@ -112,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638755819892</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="updated data handling for robot">
+      <created>1638756316450</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638756316450</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +148,7 @@
     <MESSAGE value="added data receiving on python client" />
     <MESSAGE value="changed workspace" />
     <MESSAGE value="updated gitgnore" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated gitgnore" />
+    <MESSAGE value="updated data handling for robot" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated data handling for robot" />
   </component>
 </project>

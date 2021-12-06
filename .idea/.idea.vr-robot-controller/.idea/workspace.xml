@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91af2234-ac81-4c41-abf2-bc6894fdfbb2" name="Changes" comment="improved streaming speed">
+    <list default="true" id="91af2234-ac81-4c41-abf2-bc6894fdfbb2" name="Changes" comment="stability improvements">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SocketManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SocketManager.cs" afterDir="false" />
     </list>
@@ -29,6 +29,7 @@
     <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/NuGet.config.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc3985d37b0241b48fc21474b2de25bda7e00/4a/59dc7b31/JsonConvert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10cba946e8e34ce09d78aa69c53a90703c00/52/5120b007/ImageConversion.cs" root0="SKIP_HIGHLIGHTING" />
@@ -87,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638671210517</updated>
       <workItem from="1638671216532" duration="7679000" />
-      <workItem from="1638752030812" duration="6083000" />
+      <workItem from="1638752030812" duration="6208000" />
     </task>
     <task id="LOCAL-00001" summary="standardized data sending convention">
       <created>1638752858879</created>
@@ -152,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638760358704</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="stability improvements">
+      <created>1638761455120</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1638761455120</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +193,7 @@
     <MESSAGE value="data now consumed from a queue for vr part" />
     <MESSAGE value="method to add a message to the message queue" />
     <MESSAGE value="improved streaming speed" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved streaming speed" />
+    <MESSAGE value="stability improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="stability improvements" />
   </component>
 </project>

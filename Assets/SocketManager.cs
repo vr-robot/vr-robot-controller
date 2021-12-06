@@ -99,6 +99,7 @@ public class SocketManager : MonoBehaviour
                 Material material = new Material(Shader.Find("Diffuse"));
                 material.mainTexture = tex;
                 screen.GetComponent<Renderer>().material = material;
+                _base64 = null;
             }
             catch (Exception e)
             {

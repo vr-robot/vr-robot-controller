@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91af2234-ac81-4c41-abf2-bc6894fdfbb2" name="Changes" comment="standardized data sending convention">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SocketManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SocketManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="91af2234-ac81-4c41-abf2-bc6894fdfbb2" name="Changes" comment="added data receiving on python client" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +24,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/NuGet.config.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10cba946e8e34ce09d78aa69c53a90703c00/52/5120b007/ImageConversion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21qak4U4CLQjAkkc3jhb78soCIu" />
   <component name="ProjectLevelVcsManager">
@@ -80,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1638671210517</updated>
       <workItem from="1638671216532" duration="7679000" />
-      <workItem from="1638752030812" duration="1713000" />
+      <workItem from="1638752030812" duration="2118000" />
     </task>
     <task id="LOCAL-00001" summary="standardized data sending convention">
       <created>1638752858879</created>
@@ -89,7 +87,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638752858879</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added data receiving on python client">
+      <created>1638754554194</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638754554194</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +119,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="standardized data sending convention" />
-    <option name="LAST_COMMIT_MESSAGE" value="standardized data sending convention" />
+    <MESSAGE value="added data receiving on python client" />
+    <option name="LAST_COMMIT_MESSAGE" value="added data receiving on python client" />
   </component>
 </project>

@@ -153,7 +153,11 @@ namespace BNG {
                 DebugText.text += "\nPinch Action : " + (DrawMode ? "Draw" : "Grab");
                 DebugText.text += "\nLeft Pinch Strength : " + HandTrackingController.LeftIndexPinchStrength;
                 DebugText.text += "\nRight Pinch Strength : " + HandTrackingController.RightIndexPinchStrength;
-
+                // DebugText.text += "\nPinch Strength : " + GetComponent<OVRHand>().GetFingerPinchStrength(OVRHand.HandFinger.Index);
+                // DebugText.text += "\nPinch Strength : " + GetComponent<OVRHand>().GetFingerPinchStrength(OVRHand.HandFinger.Ring);
+                // DebugText.text += "\nPinch Strength : " + GetComponent<OVRHand>().GetFingerPinchStrength(OVRHand.HandFinger.Pinky);
+                // DebugText.text += "\nRight Pinch Strength : " + HandTrackingController.RightIndexPinchStrength;
+                
                 DebugText.text += "\nLeft Tracked : " + HandTrackingController.LeftHand.IsTracked;
                 DebugText.text += "\nRight Tracked : " + HandTrackingController.RightHand.IsTracked;
                 DebugText.text += "\nConnected Controller Type : " + OVRInput.GetActiveController();

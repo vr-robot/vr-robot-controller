@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91af2234-ac81-4c41-abf2-bc6894fdfbb2" name="Changes" comment="stability improvements">
+    <list default="true" id="91af2234-ac81-4c41-abf2-bc6894fdfbb2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BNG Framework/Integrations/Oculus Integration/HandTracking/HandTrackingDemo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BNG Framework/Integrations/Oculus Integration/HandTracking/HandTrackingDemo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/BNG Framework/Scripts/Core/Button.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BNG Framework/Scripts/Core/Button.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/SocketManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SocketManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,17 +28,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/NuGet.config.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/ProjectSettings/ProjectSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc3985d37b0241b48fc21474b2de25bda7e00/4a/59dc7b31/JsonConvert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10cba946e8e34ce09d78aa69c53a90703c00/52/5120b007/ImageConversion.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21qak4U4CLQjAkkc3jhb78soCIu" />
   <component name="ProjectLevelVcsManager">
@@ -89,6 +84,8 @@
       <updated>1638671210517</updated>
       <workItem from="1638671216532" duration="7679000" />
       <workItem from="1638752030812" duration="6415000" />
+      <workItem from="1638778512400" duration="597000" />
+      <workItem from="1638779524655" duration="627000" />
     </task>
     <task id="LOCAL-00001" summary="standardized data sending convention">
       <created>1638752858879</created>

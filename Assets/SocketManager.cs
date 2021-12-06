@@ -44,14 +44,14 @@ public class SocketManager : MonoBehaviour
         // initialize message queue object
         _messageQueue = new Queue();
         
-        string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
-        {
-            id = "some guid",
-            type = "button",
-            data = "pressed"
-        });
-
-        AddToMessageQueue(dataStr);
+        // string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+        // {
+        //     id = "some guid",
+        //     type = "button",
+        //     data = "pressed"
+        // });
+        //
+        // AddToMessageQueue(dataStr);
         
         // connect to socket server
         _ws = new WebSocket(API_URL);

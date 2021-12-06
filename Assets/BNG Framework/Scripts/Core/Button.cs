@@ -31,6 +31,8 @@ namespace BNG {
         public UnityEvent onButtonDown;
         public UnityEvent onButtonUp;
 
+        public SocketManager SocketManager;
+
         AudioSource audioSource;
         Rigidbody rigid;
 
@@ -139,6 +141,19 @@ namespace BNG {
             if (onButtonDown != null) {
                 onButtonDown.Invoke();
             }
+            
+            // Call Socket Manager
+            if (SocketManager != null)
+            {
+                string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                {
+                    id = GetInstanceID().ToString(),
+                    type = "button",
+                    data = "down"
+                });
+
+                SocketManager.AddToMessageQueue(dataStr);
+            }
         }
 
         // Callback for ButtonDown
@@ -152,6 +167,19 @@ namespace BNG {
             // Call event
             if (onButtonUp != null) {
                 onButtonUp.Invoke();
+            }
+            
+            // Call Socket Manager
+            if (SocketManager != null)
+            {
+                string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                {
+                    id = GetInstanceID().ToString(),
+                    type = "button",
+                    data = "up"
+                });
+
+                SocketManager.AddToMessageQueue(dataStr);
             }
         }
 

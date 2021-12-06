@@ -15,12 +15,33 @@ public class SocketManager : MonoBehaviour
 {
     // AWS:   ws://18.232.126.27:5000/
     // Local: ws://2f6f-68-234-129-29.ngrok.io
+    // socket server url
     public string API_URL;
+    
+    // screen to draw frame onto
     public GameObject screen;
     
+    // socket and frame variables
     private WebSocket _ws;
     private bool _newFrameAvailable;
     private string _base64;
+    
+    // queue to consume when sending data to python client
+    Queue _messageQueue;
+
+    public SocketManager()
+    {
+        _messageQueue = new Queue();
+        
+        string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+        {
+            id = "some guid",
+            type = "button",
+            data = "pressed"
+        });
+        
+        _messageQueue.Enqueue(dataStr);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -48,18 +69,14 @@ public class SocketManager : MonoBehaviour
         
         // send controls
         // TODO: consume from queue
-        string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+        while (_messageQueue.Count > 0)
         {
-            id = "some guid",
-            type = "button",
-            data = "pressed"
-        });
-        
-        _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
-        {
-            sender = "vr-controller",
-            data = dataStr
-        }));
+            _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
+            {
+                sender = "vr-controller",
+                data = _messageQueue.Dequeue()
+            }));
+        }
         
         // render new screen frame
         if (screen != null && _newFrameAvailable && _base64 != null)

@@ -23,7 +23,6 @@ public class SocketManager : MonoBehaviour
     
     // socket and frame variables
     private WebSocket _ws;
-    private bool _newFrameAvailable = true;
     private string _base64;
     
     // queue to consume when sending data to python client
@@ -76,42 +75,65 @@ public class SocketManager : MonoBehaviour
             return;
         }
         
-        // send controls
-        // TODO: consume from queue
-        while (_ws != null && _messageQueue != null && _messageQueue.Count > 0)
+        try
         {
-            try
+            // request for new frame from camera
+            if (_ws != null)
             {
                 _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
                 {
                     sender = "vr-controller",
-                    data = _messageQueue.Dequeue()
+                    data = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                    {
+                        type = "frame-request",
+                    })
                 }));
             }
-            catch (Exception e)
+            
+            // send controls
+            while (_ws != null && _messageQueue != null && _messageQueue.Count > 0)
             {
-                Debug.LogError(e.Message);
+                try
+                {
+                    _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
+                    {
+                        sender = "vr-controller",
+                        data = _messageQueue.Dequeue()
+                    }));
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e.Message);
+                }
+            }
+        
+            // render new screen frame
+            if (screen != null && _base64 != null)
+            {
+                try
+                {
+                    byte[] bytes = Convert.FromBase64String(_base64);
+                    Texture2D tex = new Texture2D(1, 1);
+                    tex.LoadImage(bytes);
+
+                    Material material = new Material(Shader.Find("Diffuse"));
+                    material.mainTexture = tex;
+                    screen.GetComponent<Renderer>().material = material;
+                    _base64 = null;
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(e.Message);
+                }
             }
         }
-        
-        // render new screen frame
-        if (screen != null && _base64 != null)
+        catch (Exception e)
         {
-            try
-            {
-                byte[] bytes = Convert.FromBase64String(_base64);
-                Texture2D tex = new Texture2D(1, 1);
-                tex.LoadImage(bytes);
-
-                Material material = new Material(Shader.Find("Diffuse"));
-                material.mainTexture = tex;
-                screen.GetComponent<Renderer>().material = material;
-                _base64 = null;
-            }
-            catch (Exception e)
-            {
-                Debug.LogError(e.Message);
-            }
+            Debug.LogError(e.Source);
+            Debug.LogError(e.Message);
+            // attempt to reconnect to socket server if error
+            _ws = new WebSocket(API_URL);
+            _ws.Connect();
         }
     }
 }

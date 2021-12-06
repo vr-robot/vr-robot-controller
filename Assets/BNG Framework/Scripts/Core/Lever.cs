@@ -9,6 +9,9 @@ namespace BNG {
     /// Helper class to interact with physical levers
     /// </summary>
     public class Lever : MonoBehaviour {
+        [Header("Socket Manager")]
+        [Tooltip("Socket Manager")]
+        public SocketManager SocketManager;
 
         [Header("Rotation Limits")]
         [Tooltip("Minimum X value in Local Euler Angles")]
@@ -239,6 +242,19 @@ namespace BNG {
         /// Lever Moved to down position
         /// </summary>
         public virtual void OnLeverDown() {
+            
+            // Call Socket Manager
+            if (SocketManager != null)
+            {
+                string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                {
+                    id = GetInstanceID().ToString(),
+                    type = "lever",
+                    data = "down"
+                });
+
+                SocketManager.AddToMessageQueue(dataStr);
+            }
 
             if (SwitchOffSound != null) {
                 audioSource.clip = SwitchOffSound;
@@ -260,6 +276,18 @@ namespace BNG {
         /// Lever moved to up position
         /// </summary>
         public virtual void OnLeverUp() {
+            // Call Socket Manager
+            if (SocketManager != null)
+            {
+                string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+                {
+                    id = GetInstanceID().ToString(),
+                    type = "lever",
+                    data = "up"
+                });
+
+                SocketManager.AddToMessageQueue(dataStr);
+            }
 
             if (SwitchOnSound != null) {
                 audioSource.clip = SwitchOnSound;

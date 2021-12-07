@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -186,9 +187,12 @@ namespace BNG {
             if (onJoystickVectorChange != null) {
                 onJoystickVectorChange.Invoke(joystickVector);
             }
+
+            // minimum threshold to send messages
+            float minThreshold = 0.2f;
             
             // Call Socket Manager
-            if (SocketManager != null)
+            if (SocketManager != null && Math.Abs(joystickVector.x) > minThreshold && Math.Abs(joystickVector.y) > minThreshold)
             {
                 string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
                 {

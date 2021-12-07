@@ -31,10 +31,18 @@ public class SocketManager : MonoBehaviour
     // method to add to queue
     public void AddToMessageQueue(string message)
     {
-        if (_messageQueue != null)
+        if (_ws != null)
         {
-            _messageQueue.Enqueue(message);
+            _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
+            {
+                sender = "vr-controller",
+                data = message
+            }));
         }
+        // if (_messageQueue != null)
+        // {
+        //     _messageQueue.Enqueue(message);
+        // }
     }
 
     // Start is called before the first frame update
@@ -93,21 +101,21 @@ public class SocketManager : MonoBehaviour
             // }
             
             // send controls
-            while (_ws != null && _messageQueue != null && _messageQueue.Count > 0)
-            {
-                try
-                {
-                    _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
-                    {
-                        sender = "vr-controller",
-                        data = _messageQueue.Dequeue()
-                    }));
-                }
-                catch (Exception e)
-                {
-                    Debug.LogError(e.Message);
-                }
-            }
+            // while (_ws != null && _messageQueue != null && _messageQueue.Count > 0)
+            // {
+            //     try
+            //     {
+            //         _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
+            //         {
+            //             sender = "vr-controller",
+            //             data = _messageQueue.Dequeue()
+            //         }));
+            //     }
+            //     catch (Exception e)
+            //     {
+            //         Debug.LogError(e.Message);
+            //     }
+            // }
         
             // render new screen frame
             if (screen != null && _base64 != null)

@@ -2061,7 +2061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15abfe2126f01400da1d6ef14b587ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  API_URL: ws://2f6f-68-234-129-29.ngrok.io
+  API_URL: ws://18.232.126.27:5000/
   screen: {fileID: 1560175601}
 --- !u!4 &1030367928
 Transform:
@@ -2655,6 +2655,16 @@ PrefabInstance:
       propertyPath: InputSource
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 966178870682745713, guid: ef4ac29d82abf9a4494e8363ee31716f,
+        type: 3}
+      propertyPath: DefaultLocomotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685668824480906842, guid: ef4ac29d82abf9a4494e8363ee31716f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5386902767578703414, guid: ef4ac29d82abf9a4494e8363ee31716f,
         type: 3}
       propertyPath: DoPinchToGrab
@@ -2674,6 +2684,11 @@ PrefabInstance:
         type: 3}
       propertyPath: IsRightIndexPinching
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402552939481833645, guid: ef4ac29d82abf9a4494e8363ee31716f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6654777086401330117, guid: ef4ac29d82abf9a4494e8363ee31716f,
         type: 3}

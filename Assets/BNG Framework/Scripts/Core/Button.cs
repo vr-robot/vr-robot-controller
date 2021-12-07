@@ -32,6 +32,7 @@ namespace BNG {
         public UnityEvent onButtonUp;
 
         public SocketManager SocketManager;
+        public string socketEntityName = "button_a";
 
         AudioSource audioSource;
         Rigidbody rigid;
@@ -149,7 +150,8 @@ namespace BNG {
                 {
                     id = GetInstanceID().ToString(),
                     type = "button",
-                    data = "down"
+                    data = "down",
+                    name = socketEntityName
                 });
 
                 SocketManager.AddToMessageQueue(dataStr);
@@ -176,7 +178,8 @@ namespace BNG {
                 {
                     id = GetInstanceID().ToString(),
                     type = "button",
-                    data = "up"
+                    data = "up",
+                    name = socketEntityName
                 });
 
                 SocketManager.AddToMessageQueue(dataStr);

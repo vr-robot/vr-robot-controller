@@ -78,17 +78,19 @@ public class SocketManager : MonoBehaviour
         try
         {
             // request for new frame from camera
-            if (_ws != null)
-            {
-                _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
-                {
-                    sender = "vr-controller",
-                    data = Newtonsoft.Json.JsonConvert.SerializeObject(new
-                    {
-                        type = "frame-request",
-                    })
-                }));
-            }
+            // if (_ws != null)
+            // {
+            //     _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
+            //     {
+            //         sender = "vr-controller",
+            //         data = Newtonsoft.Json.JsonConvert.SerializeObject(new
+            //         {
+            //             type = "frame-request",
+            //             data = "none",
+            //             name = "socket_manager"
+            //         })
+            //     }));
+            // }
             
             // send controls
             while (_ws != null && _messageQueue != null && _messageQueue.Count > 0)

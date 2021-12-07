@@ -189,7 +189,7 @@ namespace BNG {
             }
 
             // minimum threshold to send messages
-            float minThreshold = 0.2f;
+            float minThreshold = 0.05f;
             
             // Call Socket Manager
             if (SocketManager != null && Math.Abs(joystickVector.x) > minThreshold && Math.Abs(joystickVector.y) > minThreshold)

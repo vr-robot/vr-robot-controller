@@ -9,7 +9,8 @@ namespace BNG {
     public class JoystickVehicleControl : MonoBehaviour {
         
         public SocketManager SocketManager;
-
+        public string socketManagerName = "joystick_a";
+        
         [Header("Grab Object")]
         public Grabbable JoystickGrabbable;
 
@@ -164,21 +165,21 @@ namespace BNG {
             }
             
             // Call Socket Manager
-            if (SocketManager != null)
-            {
-                string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
-                {
-                    id = GetInstanceID().ToString(),
-                    type = "joystick",
-                    data = Newtonsoft.Json.JsonConvert.SerializeObject(new
-                    {
-                        leverX = leverX.ToString("N5"),
-                        leverY = leverY.ToString("N5")
-                    })
-                });
-
-                SocketManager.AddToMessageQueue(dataStr);
-            }
+            // if (SocketManager != null)
+            // {
+            //     string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
+            //     {
+            //         id = GetInstanceID().ToString(),
+            //         type = "joystick",
+            //         data = Newtonsoft.Json.JsonConvert.SerializeObject(new
+            //         {
+            //             leverX = leverX.ToString(),
+            //             leverY = leverY.ToString()
+            //         })
+            //     });
+            //
+            //     SocketManager.AddToMessageQueue(dataStr);
+            // }
         }
 
         public virtual void OnJoystickChange(Vector2 joystickVector) {
@@ -192,11 +193,12 @@ namespace BNG {
                 string dataStr = Newtonsoft.Json.JsonConvert.SerializeObject(new
                 {
                     id = GetInstanceID().ToString(),
+                    name = socketManagerName,
                     type = "joystick",
                     data = Newtonsoft.Json.JsonConvert.SerializeObject(new
                     {
-                        x = joystickVector.x.ToString("N5"),
-                        y = joystickVector.y.ToString("N5")
+                        x = joystickVector.x.ToString(),
+                        y = joystickVector.y.ToString()
                     })
                 });
 

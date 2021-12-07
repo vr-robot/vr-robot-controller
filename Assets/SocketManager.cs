@@ -28,17 +28,41 @@ public class SocketManager : MonoBehaviour
     // queue to consume when sending data to python client
     Queue _messageQueue;
 
+    private long lastMessageSentTime = 0;
+
     // method to add to queue
     public void AddToMessageQueue(string message)
     {
-        if (_ws != null)
+        try
         {
-            _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
+            if (_ws != null)
             {
-                sender = "vr-controller",
-                data = message
-            }));
+                long curTime = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+                long messageCoolDownMs = 100;
+
+                if (curTime - lastMessageSentTime < messageCoolDownMs)
+                {
+                    return;
+                }
+                
+                lastMessageSentTime = curTime;
+
+                _ws.Send(Newtonsoft.Json.JsonConvert.SerializeObject(new
+                {
+                    sender = "vr-controller",
+                    data = message
+                }));
+            }
         }
+        catch (Exception e)
+        {
+            Debug.LogError(e.Source);
+            Debug.LogError(e.Message);
+            // attempt to reconnect to socket server if error
+            _ws = new WebSocket(API_URL);
+            _ws.Connect();
+        }
+
         // if (_messageQueue != null)
         // {
         //     _messageQueue.Enqueue(message);

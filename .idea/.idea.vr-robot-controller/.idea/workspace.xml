@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91af2234-ac81-4c41-abf2-bc6894fdfbb2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.vr-robot-controller/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SocketManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SocketManager.cs" afterDir="false" />
-    </list>
+    <list default="true" id="91af2234-ac81-4c41-abf2-bc6894fdfbb2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +25,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2c24f0c1857d4078b6d453f88e061a29dba00/f1/6fd316bb/DateTimeOffset.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bc3985d37b0241b48fc21474b2de25bda7e00/4a/59dc7b31/JsonConvert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10cba946e8e34ce09d78aa69c53a90703c00/52/5120b007/ImageConversion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/deepakramalingam/Documents/Projects/vr_robot/vr-robot-controller/Assets/SocketManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="21qak4U4CLQjAkkc3jhb78soCIu" />
   <component name="ProjectLevelVcsManager">
@@ -86,7 +84,7 @@
       <workItem from="1638779524655" duration="2666000" />
       <workItem from="1638817976267" duration="1079000" />
       <workItem from="1638859732707" duration="3383000" />
-      <workItem from="1638912166294" duration="15000" />
+      <workItem from="1638912166294" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="standardized data sending convention">
       <created>1638752858879</created>
@@ -214,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638868597413</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added wavelength url">
+      <created>1638912196357</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1638912196357</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +260,7 @@
     <MESSAGE value="improved joystick controls and rate limiting" />
     <MESSAGE value="improved joystick controls" />
     <MESSAGE value="joystick and button controls working perfectly" />
-    <option name="LAST_COMMIT_MESSAGE" value="joystick and button controls working perfectly" />
+    <MESSAGE value="added wavelength url" />
+    <option name="LAST_COMMIT_MESSAGE" value="added wavelength url" />
   </component>
 </project>
